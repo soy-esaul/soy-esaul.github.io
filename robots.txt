@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://soy-esaul.github.io/sitemap.xml
+Sitemap: https://soy-esaul.github.io/blog//sitemap.xml
