@@ -24,4 +24,4 @@ social: true # includes social icons at the bottom of the page
 
 [//]: # Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
 
-PhD student at Université of Angers and Laboratoire de Probabilités, Statistics et Modelisation under the supervision of Kilian Raschel and Pierre Tarrago. My topics of interest are in Probability Theory, mainly Random Matrix Theory and Random Walks in Cones.
+PhD student at Université of Angers and Laboratoire de Probabilités, Statistics et Modelisation under the supervision of Kilian Raschel and Pierre Tarrago. My area of interest is Probability Theory, more specifically Random Matrix Theory and Random Walks in Cones.
