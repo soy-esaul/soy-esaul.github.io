@@ -20,6 +20,7 @@ generate_rss = true
 website_title = "Esaul Gonzalez"
 website_descr = "Personal website"
 website_url   = "https://soy-esaul.github.io/"
+prepath = "equistatlab"
 +++
 
 <!--
