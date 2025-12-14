@@ -42,6 +42,44 @@
 
 <item>
   <title>
+    <![CDATA[  First post  ]]>
+  </title>
+  <link> https://soy-esaul.github.io/posts/2025-12-13-sample-post/index.html </link>
+  <guid> https://soy-esaul.github.io/posts/2025-12-13-sample-post/index.html </guid>
+  <description>
+    <![CDATA[  This is a short post to learn Franklin  ]]>
+  </description>  
+    
+  <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Esaul</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Yet another post  ]]>
+  </title>
+  <link> https://soy-esaul.github.io/posts/2025-12-11-another-post/index.html </link>
+  <guid> https://soy-esaul.github.io/posts/2025-12-11-another-post/index.html </guid>
+  <description>
+    <![CDATA[  This is another short post to learn Franklin  ]]>
+  </description>  
+    
+  <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Esaul</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Research  ]]>
   </title>
   <link> https://soy-esaul.github.io/research/index.html </link>
