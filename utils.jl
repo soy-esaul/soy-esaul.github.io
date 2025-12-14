@@ -14,3 +14,49 @@ function lx_baz(com, _)
   # do whatever you want here
   return uppercase(brace_content)
 end
+
+# Blog posts
+@delay function hfun_blogposts()
+    today = Dates.today()
+    curyear = year(today)
+    curmonth = month(today)
+    curday = day(today)
+
+    list = readdir("posts")
+
+    filter!(endswith(".md"), list)
+    function sorter(p)
+        ps = splitext(p)[1]
+        url = "./posts/$ps/"
+        surl = strip(url, '/')
+        pubdate = pagevar(surl, "rss_pubdate")
+        #= if isnothing(pubdate)
+            return Date(Dates.unix2datetime(stat(surl * ".md").ctime))
+        end
+        return Date(pubdate, dateformat"yyyy-mm-dd") =#
+    end
+    sort!(list, by=sorter, rev=true)
+
+    io = IOBuffer()
+    #write(io, """<ul class="blog-posts">""")
+
+    write(io, """<div class="franklin-content">""")
+    for (i, post) in enumerate(list)
+        ps = splitext(post)[1]
+        write(io, "<li>")
+        url = "posts/$ps/"
+        url_aux = "../posts/$ps/"
+        surl = strip(url, '/')
+        title = pagevar(surl, "title")
+        pubdate = pagevar(surl, "rss_pubdate")
+        description = pagevar(surl, "rss_description")
+        if isnothing(pubdate)
+            date = "$curyear-$curmonth-$curday"
+        else
+            date = Date(pubdate)
+        end
+        write(io, """<a href="$url_aux">($date) $title</a></b><p>""")
+    end
+    write(io, "</div>")
+    return String(take!(io))
+end
