@@ -10,7 +10,9 @@ body {
     text-align: center;
 }
 
-svg {
+
+
+svg { fill.setAttribute("fill","red");
     border: 1px solid #aaa;
     background: #fafafa;
 }
@@ -33,7 +35,7 @@ svg {
         <input id="aSlider"
                type="range"
                min="-1"
-               max="-0.01"
+               max="-0.51"
                step="0.01"
                value="-0.50">
     </label>
@@ -90,7 +92,72 @@ function draw(){
 
 
     // infinite rays
-    let L=4;
+    let L=40;
+    
+    
+    
+    if (a >= -0.51) {
+
+    // Fill the right half-plane
+    let fill = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "polygon"
+    );
+
+    fill.setAttribute(
+        "points",
+        [
+            point(z1[0] + L*Math.cos(theta-Math.PI/2),-L),
+            point(L,-L),
+            point(L,L),
+            point(z2[0] + L*Math.cos(-theta+Math.PI/2),L)
+        ].join(" ")
+    );
+
+    fill.setAttribute(
+        "fill",
+        "rgba(100,150,255,0.25)"
+    );
+
+    svgGroup.appendChild(fill);
+    
+
+} else {
+
+    // Original wedge fill
+    let fill = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "polygon"
+    );
+
+    let p1 = [
+        z1[0] + L*Math.cos(theta-Math.PI/2),
+        z1[1] + L*Math.sin(theta-Math.PI/2)
+    ];
+
+    let p2 = [
+        z2[0] + L*Math.cos(-theta+Math.PI/2),
+        z2[1] + L*Math.sin(-theta+Math.PI/2)
+    ];
+
+    fill.setAttribute(
+        "points",
+        [
+            point(0,0),
+            point(z1[0],z1[1]),
+            point(p1[0],p1[1]),
+            point(p2[0],p2[1]),
+            point(z2[0],z2[1])
+        ].join(" ")
+    );
+
+    fill.setAttribute(
+        "fill",
+        "rgba(100,150,255,0.25)"
+    );
+
+    svgGroup.appendChild(fill);
+}
 
     let elements=[];
 
@@ -124,6 +191,40 @@ function draw(){
         z2[0],z2[1],
         "black",0.03
     );
+    
+    // Filled region
+let fill = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "polygon"
+);
+
+let p1 = [
+    z1[0] + L*Math.cos(theta - Math.PI/2),
+    z1[1] + L*Math.sin(theta - Math.PI/2)
+];
+
+let p2 = [
+    z2[0] + L*Math.cos(-theta + Math.PI/2),
+    z2[1] + L*Math.sin(-theta + Math.PI/2)
+];
+
+fill.setAttribute(
+    "points",
+    [
+        point(0,0),
+        point(z1[0],z1[1]),
+        point(p1[0],p1[1]),
+        point(p2[0],p2[1]),
+        point(z2[0],z2[1])
+    ].join(" ")
+);
+
+fill.setAttribute(
+    "fill",
+    "rgba(100,150,255,0.25)"
+);
+
+svgGroup.appendChild(fill);
 
 
     // continue to infinity
@@ -215,5 +316,8 @@ draw();
 
 </script>
 
+<h2>
+Work in progress. Currently, the polygon only supports values of a in [-1,-0.51]
+</h2>
 </body>
 </html>
