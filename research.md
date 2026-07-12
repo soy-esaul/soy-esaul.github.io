@@ -11,6 +11,8 @@ tags = ["research", "preprints", "articles", "papers"]
 
 ## Preprints
 
+## Talks
+
 ## Dissertations
 
 - Master's thesis. **Deterministic eigenvalue processes arising in Random Matrix Theory and Finite Free Probability**. Supervised by [Octavio Arizmendi Echegaray](https://www.cimat.mx/~octavius/) and [José Luis Pérez Garmendia](https://sites.google.com/cimat.mx/jose-luis-perez). Centro de Investigación en Matemáticas, Guanajuato (México). Defended on November 2024.
