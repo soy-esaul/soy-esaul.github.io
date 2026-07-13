@@ -55,7 +55,7 @@ svg { fill.setAttribute("fill","red");
 </svg>
 
 
-<script type="module">
+<script>
 
 const svgGroup =
     document.getElementById("polygon");
@@ -93,14 +93,14 @@ function draw(){
     ];
 
 
-    // infinite rays
+    /* infinite rays*/
     let L=40;
     
     
     
-    if (a = -0.5) {
+    if (a >= -0.52) {
 
-    // Fill the right half-plane
+    /* Fill the right half-plane */
     let fill = document.createElementNS(
         "http://www.w3.org/2000/svg",
         "polygon"
@@ -126,7 +126,7 @@ function draw(){
 
 } else {
 
-    // Original wedge fill
+    /* Original wedge fill*/
     let fill = document.createElementNS(
         "http://www.w3.org/2000/svg",
         "polygon"
@@ -181,7 +181,7 @@ function draw(){
     }
 
 
-    // sides from origin
+    /* sides from origin */
     line(
         0,0,
         z1[0],z1[1],
@@ -194,7 +194,7 @@ function draw(){
         "#6a3d9a",0.06
     );
     
-    // Filled region
+    /* Filled region */
 let fill = document.createElementNS(
     "http://www.w3.org/2000/svg",
     "polygon"
@@ -229,7 +229,7 @@ fill.setAttribute(
 svgGroup.appendChild(fill);
 
 
-    // continue to infinity
+    /* continue to infinity */
     line(
         z1[0],
         z1[1],
@@ -245,67 +245,6 @@ svgGroup.appendChild(fill);
         z2[1]+L*Math.sin(-theta + Math.PI/2),
         "#6a3d9a",0.03
     );
-
-
-    function vertex(x,y,color,label){
-
-        let c=document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "circle"
-        );
-
-        c.setAttribute("cx",x);
-        c.setAttribute("cy",y);
-        c.setAttribute("r",0.07);
-        c.setAttribute("fill",color);
-
-        svgGroup.appendChild(c);
-
-
-        let t=document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "text"
-        );
-
-        t.setAttribute("x",x+0.1);
-        t.setAttribute("y",y-0.1);
-        t.textContent=label;
-
-        svgGroup.appendChild(t);
-    }
-
-
-    vertex(0,0,"red");
-
-    vertex(
-        z1[0],
-        z1[1],
-        "green",
-        /*"z₊"*/
-    );
-
-    vertex(
-        z2[0],
-        z2[1],
-        "green",
-        /*"z₋"*/
-    );
-
-
-    let text=document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "text"
-    );
-
-    text.setAttribute("x",-2.8);
-    text.setAttribute("y",-1.8);
-    text.textContent=
-        "origin angle = "
-        +(-Math.PI/a).toFixed(3)
-        +" rad";
-
-    svgGroup.appendChild(text);
-
 }
 
 
