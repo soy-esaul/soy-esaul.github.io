@@ -23,6 +23,25 @@
 
 <item>
   <title>
+    <![CDATA[  Research  ]]>
+  </title>
+  <link> https://soy-esaul.github.io/research/index.html </link>
+  <guid> https://soy-esaul.github.io/research/index.html </guid>
+  <description>
+    <![CDATA[  My research productions  ]]>
+  </description>  
+    
+  <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Esaul Gonzalez</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Teaching  ]]>
   </title>
   <link> https://soy-esaul.github.io/teaching/index.html </link>
@@ -74,25 +93,6 @@
   
   <atom:author>
     <atom:name>Esaul</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Research  ]]>
-  </title>
-  <link> https://soy-esaul.github.io/research/index.html </link>
-  <guid> https://soy-esaul.github.io/research/index.html </guid>
-  <description>
-    <![CDATA[  My research productions  ]]>
-  </description>  
-    
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Esaul Gonzalez</atom:name>
   </atom:author>
         
 </item>
