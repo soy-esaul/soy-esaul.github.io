@@ -8,6 +8,7 @@ tags = ["Teaching", "Course", "Material"]
 +++
 
 ## Undergraduate teaching
+- Jan-May 2026. Géométrie de l'espace (in French). Exercise sessions. Licence Mathématiques-Physique-Chimie. Université d'Angers (France)
 
 - Sep-Dec 2025. Algèbre élémentaire (in French). Lectures and teaching assistant. Licence Mathématiques-Physique-Chimie. Université d'Angers (France)
 
